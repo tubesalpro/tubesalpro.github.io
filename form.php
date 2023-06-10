@@ -13,7 +13,7 @@
         $dbname = "dblaporan";
     
         // creating a connection
-        $con = mysqli_connect($host, $username, $password, $dblaporan);
+        $con = mysqli_connect($host, $username, $password, $dbname);
     
         // to ensure that the connection is made
         if (!$con)
@@ -22,7 +22,7 @@
         }
     
         // using sql to create a data entry query
-        $sql = "INSERT INTO contactform_entries (id, fname, lname, email) VALUES ('0', '$nama', '$lokasi', '$laporan')";
+        $sql = "INSERT INTO  contactform_entries (id, nama, , laporan) VALUES ('0', '$nama', '$lokasi', '$laporan')";
       
         // send query to the database to add values and confirm if successful
         $rs = mysqli_query($con, $sql);
